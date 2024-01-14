@@ -12,28 +12,14 @@
 <?php
 require __DIR__ . '\Models\movies.php';
 require __DIR__ . '\data.php';
-
-var_dump($batman);
-var_dump($lebowski);
 ?>
 
 <body>
-    <header class="text-center py-3">
+    <header class="text-center py-3 mb-3 bg-primary">
         <h1>PHP Movies</h1>
     </header>
     <main>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2> <?php echo $movies[0]->getMovieData() ?> </h2>
-                </div>
-                <div class="col">
-                    <h2> <?php echo $lebowski->getMovieData() ?> </h2>
-                </div>
-
-            </div>
-
-        </div>
+        <?php require __DIR__ . '\partials\cards.php' ?>;
     </main>
     <footer></footer>
     <script src="main.js"></script>
