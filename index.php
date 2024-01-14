@@ -10,9 +10,9 @@
     <title>movies</title>
 </head>
 <?php
-require __DIR__ . '\movies.php';
-$batman = new Movie('Batman Begins', 'Christopher Nolan', 2005, ['superhero', 'drama']);
-$lebowski = new Movie('the big lebowski', ['Joel Coen', 'Ethan Coen'], 1998, 'comedy');
+require __DIR__ . '\Models\movies.php';
+require __DIR__ . '\data.php';
+
 var_dump($batman);
 var_dump($lebowski);
 ?>
@@ -25,7 +25,7 @@ var_dump($lebowski);
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2> <?php echo $batman->getMovieData() ?> </h2>
+                    <h2> <?php echo $movies[0]->getMovieData() ?> </h2>
                 </div>
                 <div class="col">
                     <h2> <?php echo $lebowski->getMovieData() ?> </h2>
