@@ -1,16 +1,19 @@
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="card px-2 pt-2">
-                <h2> <?php echo $movies[0]->getMovieData() ?> </h2>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card px-2 pt-2">
-                <h2> <?php echo $lebowski->getMovieData() ?> </h2>
-            </div>
-        </div>
+<?php
+function printMovies()
+{
+    global $movies;
+    echo '<div class="container">';
+    echo '<div class="row">';
 
-    </div>
+    foreach ($movies as $movie) {
+        echo '<div class="col-6 my-2">';
+        echo '<div class="card px-2 pt-2">';
+        echo '<h2>' . $movie->getMovieData() . '</h2>';
+        echo '</div>';
+        echo '</div>';
+    }
 
-</div>
+    echo '</div>';
+    echo '</div>';
+}
+printMovies();
